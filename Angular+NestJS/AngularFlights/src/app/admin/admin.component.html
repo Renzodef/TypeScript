@@ -9,7 +9,32 @@
     <input type="datetime-local" [(ngModel)]="arrive">
     <span>nonstop:</span>   
     <input type="checkbox" (click)="toggleNonStop()">
-
     <button (click)="sendFlight()">create flight</button>
 </div>
+
+<div class="editPanel">
+    <table class="flightTable">
+        <tr>
+            <td>origin</td>
+            <td>destination</td>
+            <td>flight</td>
+            <td>depart</td>
+            <td>arrive</td>
+            <td>nonstop</td>
+            <td>update</td>
+            <td>delete</td>
+        </tr>
+        <tr *ngFor="let flight of flightList; let i=index">
+            <td><input [(ngModel)]='flight.origin'></td>
+            <td><input [(ngModel)]='flight.destination'></td>
+            <td><input [(ngModel)]='flight.flightNumber'></td>
+            <td><input [(ngModel)]='flight.depart'></td>
+            <td><input [(ngModel)]='flight.arrive'></td>
+            <td><input [(ngModel)]='flight.nonstop'></td>
+            <td><button class="update" (click)="update(flight)">go</button></td>
+            <td><button class="delete" (click)="delete(flight)">go</button></td>
+        </tr>
+    </table>
+</div>
+
 

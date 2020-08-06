@@ -5,10 +5,9 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    // background: url("assets/mountains.jpeg");
-    background: url("https://tsflights-images.firebaseapp.com/mountains.jpeg"); 
- 
-    background-repeat: no-repeat;
+    overflow-x: hidden; // horizontal
+    background: url("assets/mountains.jpeg"); 
+    background-repeat: repeat;
     background-size: cover;
 }
 
@@ -21,9 +20,7 @@ header {
     align-items: center;
     justify-content: space-between;
     .logo_box {
-        background-image: url("https://tsflights-images.firebaseapp.com/TsFlightsHorizLogo.jpg");
-        // background-image: url("assets/TsFlightsHorizLogo.jpg");
-
+        background-image: url("assets/TsFlightsHorizLogo.jpg");
         height: 80px;
         width: 250px;
         background-repeat: no-repeat;

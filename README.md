@@ -1,7 +1,7 @@
 ## Angular
 It contains examples and projects made with Front-End framework Angular.
 
-## Angular
+## Angular+NestJS
 It contains an example of a Full Stack Web Application made with the Front-End framework Angular and the Back-end framework NestJS.
 
 ## Nest.js

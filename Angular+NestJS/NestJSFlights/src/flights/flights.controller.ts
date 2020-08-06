@@ -33,15 +33,14 @@ export class FlightsController {
   }
 
   // UPDATE
-  @Patch(":id/update")
+  @Post(":id/update")
   async update(@Param('id') id, @Body() flight: Flight): Promise<any> {
     flight.id = Number(id);
     return this.flightService.update(flight);
   }
 
-
   // DELETE
-  @Delete(":id/delete")
+  @Post(":id/delete")
   async delete(@Param('id') id): Promise<any> {
     return this.flightService.delete(id);
   }

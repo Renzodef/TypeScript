@@ -20,7 +20,7 @@ export class FlightsService {
   }
 
   async findAll(): Promise<Flights[]> {
-    return this.flightRepository.find()s;
+    return this.flightRepository.find();
   }
 
    async query(orig: string, dest: string): Promise<any> {

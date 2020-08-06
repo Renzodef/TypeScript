@@ -14,19 +14,32 @@ export class FlightsService {
 
   backEndURL: string;
 
-  getFlights(): Observable<any> {
-    return this.http.get('http://localhost:3002/flights/');
+  getFlights(orig: string, dest: string): Observable<any> {
+    return this.http.get(`${this.backEndURL}/flights/query/${orig}/${dest}`);
+  }
+
+  getAllFlights(): Observable<any> {
+    return this.http.get(`${this.backEndURL}/flights`);
+  }
+
+  getAllOrigins(): Observable<any> {
+    return this.http.get(`${this.backEndURL}/flights/cities/origins`);
+  }
+
+  getAllDestinations(): Observable<any> {
+    return this.http.get(`${this.backEndURL}/flights/cities/destinations`);
   }
 
   postFlight(flight: Flight) {
-    return this.http.post(`${this.backEndURL}/flights`, flight).subscribe(data => {
-      alert("Flight registered correctly.");
-    })
+    return this.http.post(`${this.backEndURL}/flights`, flight)
   }
 
+  updateFlight(flight: Flight) {
+    return this.http.post(`${this.backEndURL}/flights/${flight.id}/update`, flight)
+  }
 
   deleteFlight(id: number) {
-
+    return this.http.post(`${this.backEndURL}/flights/${id}/delete`, null);
   }
 
   getBackEndUrl(): string {
