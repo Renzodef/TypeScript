@@ -93,7 +93,7 @@
 		{
 			"name": "Update Flight",
 			"request": {
-				"method": "PATCH",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -122,7 +122,7 @@
 		{
 			"name": "Delete Flight",
 			"request": {
-				"method": "DELETE",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": "localhost:3002/flights/1/delete",

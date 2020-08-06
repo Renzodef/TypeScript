@@ -15,4 +15,13 @@ nonstop BOOLEAN);
 5) 
 
 ## RUNNING BACK-END
+1) Open the folder NestJSFlights in the terminal and run: npm install
+2) Configure the database access in src/app.module.ts
+3) Run the server with: npm run start
+
+## RUNNING FRONT-END
+1) Open the folder AngularFlights in the terminal and run: npm install
+2) Run the application with : ng serve --open
+
+
 
