@@ -1,0 +1,36 @@
+<div class="outer_container">
+
+  <div class="big_container">
+    <div class="top_bar">
+      <span>Flights List</span>
+    </div>
+    <div class="transparent_bg">
+      <div class="container">
+        <div class="search_pane"> 
+        </div>
+        <div class="flight_pane">  
+          <div class="flight_headers">
+            <div class="origin cell"> Origin </div>
+            <div class="destination cell"> Destination </div>
+            <div class="flight_number cell"> Flight </div>
+            <div class="departs cell"> Departs </div>
+            <div class="arrives cell"> Arrives </div>
+            <div class="nonstop cell"> Nonstop </div>
+          </div>
+          
+          <div *ngFor="let flight of flights" class="flight_results">
+            <div class="origin cell"> {{flight.origin}}</div>
+            <div class="destination cell"> {{flight.destination}}</div>
+            <div class="flight_number cell"> {{flight.flightNumber}}</div>
+            <div class="departs cell"> {{flight.depart | date:'medium' }}</div>
+            <div class="arrives cell"> {{flight.arrive | date:'medium' }}</div>
+            <div class="nonstop cell"> {{flight.nonstop}}</div>
+          </div>
+          <div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

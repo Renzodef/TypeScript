@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "7ed18c46-4abb-4382-bc53-8b8908af2724",
+		"name": "FlightPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Flight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"origin\": \"Bari\",\r\n\"destination\": \"Turin\",\r\n\"flightNumber\": 121,\r\n\"depart\": \"2020-08-05T22:00:00.000Z\",\r\n\"arrive\": \"2020-08-05T22:00:00.000Z\",\r\n\"nonstop\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Flights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flighs from Origin Destination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/flights/query/Bari/Turin",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights",
+						"query",
+						"Bari",
+						"Turin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flight from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/flights/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Flight",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"origin\": \"Bari\",\r\n\"destination\": \"Turin\",\r\n\"flightNumber\": 129,\r\n\"depart\": \"2020-08-05T22:00:00.000Z\",\r\n\"arrive\": \"2020-08-05T22:00:00.000Z\",\r\n\"nonstop\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/flights/1/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights",
+						"1",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Flight",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/flights/1/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"flights",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "640a2ca4-92c9-4802-a555-770fce0e30b3",
+		"name": "PostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Car from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
