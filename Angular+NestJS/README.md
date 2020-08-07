@@ -1,6 +1,6 @@
 # HOW TO RUN THIS PROJECT
 
-### DATABASE CREATION
+## DATABASE CREATION
 1) Download from your browser Postgres and add its bin folder to the environment variable (or instead you can use pgAdmin to create databases and run queries).
 2) Open the terminal and type: psql -U postgres (if postgres is the default user you configured when installing) and run the queries below.
 3) CREATE DATABASE transportation;
@@ -22,6 +22,3 @@ nonstop BOOLEAN);
 ## RUNNING FRONT-END
 1) Open the folder AngularFlights in the terminal and run: npm install
 2) Run the application with : ng serve --open
-
-
-
