@@ -12,7 +12,6 @@ flightNumber INT,
 depart TIMESTAMP WITH TIME ZONE,
 arrive TIMESTAMP WITH TIME ZONE, 
 nonstop BOOLEAN);
-5) 
 
 ## RUNNING BACK-END
 1) Open the folder NestJSFlights in the terminal and run: npm install
